@@ -14,7 +14,7 @@
 console.log("ciao");
 
 // 1. Creazione delle mail di chi puo accedere
-const emails = ["sandra10@gmail.com", "erica@gmail.com", "roberta10@gmail.com", "diego2@gmail.com"];
+const emails = ["sandra10@gmail.com", "erica@gmail.com", "roberta10@gmail.com", "diego2@gmail.com", "maria,12@gmail.com"];
 
 
 // 2. Creazione di una variabile con prompt, cosi l'utente può inserire sua mail
@@ -32,15 +32,20 @@ let trovato = false;
 
 for (let i = 0; i < emails.length; i++) {
     const curEmails = emails[i];
-
     if (curEmails === utente) {
         trovato = true;
-        console.log("Accesso consentito");
-        i = emails.length;  
-    } else {
-        console.log("Accesso negato");
+        break;
     }
 }
+if (trovato) {
+    console.log("Accesso consentito");
+} else {
+    console.log("Accesso denegato");
+}
+
+
+
+
 
 
 
